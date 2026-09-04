@@ -1,0 +1,16 @@
+// output is structured objects instread of plain text allowing pipilines
+Get-Process
+Get-Service
+Get-Content
+Test-NetConnection google.com
+Get-Help, Get-Process, -Online
+Get-ChildItem OR Get-Location
+Restart-Computer
+
+whoami
+New-Item -Path "C:\Users\ <YourUserName> \Desktop " -Name "..." -ItemType "File/Folder" 
+
+New-Item -Path"$HOME\Destop\NewFolder" -ItemType Directory
+cd $HOME\Desktop\NewFolder
+New-Item File1.txt
+Remove-Item "$HOME\Desktop\New Folder" -Recurse
