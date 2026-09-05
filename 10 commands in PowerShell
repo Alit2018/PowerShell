@@ -1,4 +1,6 @@
 // output is structured objects instread of plain text allowing pipilines
+//a cmdlet is a compiled .NET class (not a method) written in a language like C# or PowerShell itself.
+
 Get-Process
 Get-Service
 Get-Content
