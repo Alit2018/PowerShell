@@ -1,0 +1,2 @@
+//Since PowerShell is built on top of .NET, you can bypass cmdlets and call the .Delete() method 
+//directly on the .NET Directory class or a folder object.
