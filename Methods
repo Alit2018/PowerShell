@@ -1,2 +1,19 @@
 //Since PowerShell is built on top of .NET, you can bypass cmdlets and call the .Delete() method 
 //directly on the .NET Directory class or a folder object.
+
+//While you should default to cmdlets for 90% of your PowerShell tasks, 
+//there are specific scenarios where using a .NET method is the superior choice.
+
+Test-Path -Path "C:\Test\*.txt" = [System.IO.File]::Exists("C:\Test\Log.txt")
+Test-Path "C:\Test\*.txt" //searches for any text file inside that folder
+
+[System.IO.File]::Exists("C:\Test\Log.txt") //looks for that one exact file name
+
+[System.IO.File]: This is the Class. You are telling PowerShell, 
+"Go into the .NET library, look inside the System input/output section, 
+and pull out the blueprint for a File."
+::: This is the Static Method Operator. It tells PowerShell that you are about to call 
+a built-in function belonging directly to that class, rather than an active file object.
+Exists(): This is the Method. It is the specific action or "button" you are triggering.
+"C:\Test\Log.txt": This is the Argument (or parameter) you are passing into the method 
+so it knows which specific path to look for.
