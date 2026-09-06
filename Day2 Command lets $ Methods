@@ -1,0 +1,47 @@
+//brew install powershell
+
+Get-Help Get-Process -Online
+Get-Command
+Get-Process | Where-Object {$_.CPU -gt 10} | Sort-Object CPU -Descending //pass objects
+Invoke-RestMethod -Uri "https://github.com"   //interact with REST APIs
+
+nstall-Module -Name Az -Scope CurrentUser
+Connect-AzAccount //install and managae clous Azure
+
+Get-Date
+Get-Process | Select-Object -First 10
+New-Item -Path ./practice.txt -ItemType File -Value "PowerShell works on my M4 Mac!"
+
+.NET - string manipulation and math method
+$text = "hello from mac"
+$text.ToUpper()
+$text.Replace("mac", "PowerShell")
+
+[Math]::Sqrt(144)
+[Math]::PI
+
+Get-Service, Get-WmiObject, Get-ChildItem and Get-Location
+
+Static class Method:
+[Math]::Round(3.75)
+[Math]::Max(50, 120)
+[Math]::Floor(5.9)  # Returns 5
+
+Instance Method(.):
+$Today = Get-Date
+$Today.AddDays(7)
+
+How to see everything inside the Math class:
+[Math] | Get-Member -Static
+
+[DateTime]::Now  # Displays the exact current date and time
+
+Without brackets (treated as text):
+$x = "5"
+$y = "5"
+$x + $y   # Outputs "55" because it glues the text together
+With brackets (forced to be integers):
+[int]$x = "5"
+[int]$y = "5"
+$x + $y   # Outputs 10 because it treats them as real numbers
+
